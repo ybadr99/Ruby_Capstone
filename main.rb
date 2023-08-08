@@ -23,11 +23,10 @@ def main
     case number
     when '7'
       puts 'Thank you for using this app Goodbye!'
-      break
     else
       puts 'Invalid input'
-      break
     end
+    break
   end
 end
 
