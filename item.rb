@@ -10,12 +10,13 @@ class Item
   end
 
   def can_be_archived?
-    #    published_date =Time.now.year
-    years_since_publication = Time.now.year - published_date
-    years_since_publication > 10
+    current_date = Time.now
+    published_date = Time.parse(@published_date)
+    ten_years_ago = Time.new(current_date.year - 10, current_date.month, current_date.day)
+    published_date < ten_years_ago
   end
 
   def move_to_archive
-    can_be_archived?
+    @archived = can_be_archived?
   end
 end
