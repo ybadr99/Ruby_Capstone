@@ -9,6 +9,10 @@ class Item
     @archived = false
   end
 
+  def author(new_author)
+    @author = new_author
+  end
+
   def move_to_archive
     @archived = true if can_be_archived?
   end
