@@ -12,7 +12,7 @@ def options_list()
         6 - Add MusicAlbum
         7 - Add game
         8 - Exit
-        print Choose an option: 
+        print Choose an option:
         "
   puts list
   gets.chomp
@@ -21,7 +21,7 @@ end
 def main
   app = App.new
   puts 'Welcome to Catalog of my things!'
- 
+
   loop do
     puts "\nOptions:"
     number = options_list
