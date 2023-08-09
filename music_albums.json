@@ -1,0 +1,22 @@
+[
+  {
+    "published_date": "2014",
+    "label": "Good Kid Mad City",
+    "author": "Kendrick Lamar",
+    "on_spotify": true,
+    "genre": {
+      "id": 83,
+      "name": "HipHop"
+    }
+  },
+  {
+    "published_date": "2023",
+    "label": "5th Dimension",
+    "author": "Stonebwoy",
+    "on_spotify": true,
+    "genre": {
+      "id": 68,
+      "name": "Afro Pop"
+    }
+  }
+]
