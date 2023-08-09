@@ -1,7 +1,7 @@
-require_relative 'item'
-require_relative 'music_album'
-require_relative 'genre'
-require './preserve_data'
+require './classes/item'
+require './classes/music_album'
+require './classes/genre'
+require_relative 'preserve_data'
 
 class App
   def initialize
@@ -12,14 +12,14 @@ class App
 
   #   Method to save data to json
   def save_all_data_to_json
-    store_data_to_json('./music_albums.json', @music_albums)
-    store_data_to_json('./genres.json', @genres)
+    store_data_to_json('./data/music_albums.json', @music_albums)
+    store_data_to_json('./data/genres.json', @genres)
   end
 
   #   Method to load data from json
   def load_all_data_from_json
-    @music_albums = load_data_from_json('./music_albums.json')
-    @genres = load_data_from_json('./genres.json')
+    @music_albums = load_data_from_json('./data/music_albums.json')
+    @genres = load_data_from_json('./data/genres.json')
   end
 
   # Methods to list all albums and genres

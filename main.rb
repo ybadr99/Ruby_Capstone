@@ -1,5 +1,5 @@
 require './classes/item'
-require './classes/app'
+require_relative 'app'
 
 def options_list()
   list = "

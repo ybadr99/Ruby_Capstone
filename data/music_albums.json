@@ -1,7 +1,7 @@
 [
   {
     "published_date": "2014",
-    "label": "Good Kid Mad City",
+    "label": "Good Kid, m.A.A.d City",
     "author": "Kendrick Lamar",
     "on_spotify": true,
     "genre": {
@@ -17,6 +17,16 @@
     "genre": {
       "id": 68,
       "name": "Afro Pop"
+    }
+  },
+  {
+    "published_date": "2014",
+    "label": "Forest Hill Drive",
+    "author": "J.Cole",
+    "on_spotify": true,
+    "genre": {
+      "id": 83,
+      "name": "HipHop"
     }
   }
 ]
