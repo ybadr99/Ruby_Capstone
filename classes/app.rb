@@ -75,34 +75,8 @@ end
     @music_albums << music_album
     @genres << genre
     save_all_data_to_json
+    load_all_data_from_json
     puts "Music album added successfully!"
   end
 
-
-#   Method to display options in terminal
-  def start
-    loop do
-      puts "\nOptions:"
-      puts "1. List all music albums"
-      puts "2. List all genres"
-      puts "3. Add a music album"
-      puts "4. Exit"
-      print "Choose an option: "
-
-      choice = gets.chomp.to_i
-
-      case choice
-      when 1
-        list_all_music_albums
-      when 2
-        list_all_genres
-      when 3
-        add_music_album
-      when 4
-        break
-      else
-        puts "Invalid choice!"
-      end
-    end
-  end
 end
