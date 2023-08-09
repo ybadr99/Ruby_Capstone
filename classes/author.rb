@@ -2,7 +2,7 @@ require_relative 'item'
 
 class Author
   attr_reader :id, :items
-  attr_accessor :first_name, :last_name, :items
+  attr_accessor :first_name, :last_name
 
   def initialize(first_name, last_name)
     @id = rand(1..100)
@@ -15,5 +15,9 @@ class Author
   def add_item(item)
     @items << item
     item.author(self)
+  end
+
+  def self.from_hash(data)
+    new(data['first_name'], data['last_name'])
   end
 end
