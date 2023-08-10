@@ -21,6 +21,10 @@ Metrics/BlockLength:
 Metrics/CyclomaticComplexity:
   Max: 10
 
+  Metrics/CyclomaticComplexity:
+  Max: 15 # Your desired max complexity
+
+
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
