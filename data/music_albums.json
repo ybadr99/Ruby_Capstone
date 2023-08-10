@@ -6,7 +6,7 @@
     "on_spotify": true,
     "genre": {
       "id": 55,
-      "name": "HipHop"
+      "name": "Hip Hop"
     }
   },
   {
@@ -26,7 +26,7 @@
     "on_spotify": true,
     "genre": {
       "id": 64,
-      "name": "HipHop"
+      "name": "Hip Hop"
     }
   },
   {
@@ -37,6 +37,26 @@
     "genre": {
       "id": 37,
       "name": "Afro-Beat"
+    }
+  },
+  {
+    "published_date": "2019-11-20",
+    "label": "Thy Part 2",
+    "author": "Kofi Kinaata",
+    "on_spotify": true,
+    "genre": {
+      "id": 1,
+      "name": "High Life"
+    }
+  },
+  {
+    "published_date": "2023-02-19",
+    "label": "We're All Alone In This Together",
+    "author": "Santan Dave",
+    "on_spotify": true,
+    "genre": {
+      "id": 41,
+      "name": "Drill"
     }
   }
 ]
