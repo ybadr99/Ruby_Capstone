@@ -33,10 +33,10 @@ def main
       app.list_all_genres
     when '5'
       app.list_labels
-    when '6'
-      app.add_music_album
     when '7'
       app.add_book
+    when '8'
+      app.add_music_album
     when '0'
       puts 'Thank you for using this app Goodbye!'
       break

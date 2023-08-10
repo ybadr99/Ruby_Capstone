@@ -1,11 +1,7 @@
 [
   {
     "id": 55,
-    "name": "HipHop"
-  },
-  {
-    "id": 1,
-    "name": "sd"
+    "name": "Hip Hop"
   },
   {
     "id": 100,
@@ -13,10 +9,18 @@
   },
   {
     "id": 64,
-    "name": "HipHop"
+    "name": "Hip Hop"
   },
   {
     "id": 37,
     "name": "Afro-Beat"
+  },
+  {
+    "id": 1,
+    "name": "High Life"
+  },
+  {
+    "id": 41,
+    "name": "Drill"
   }
 ]
