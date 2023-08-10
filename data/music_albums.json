@@ -38,5 +38,15 @@
       "id": 37,
       "name": "Afro-Beat"
     }
+  },
+  {
+    "published_date": "2001-01-01",
+    "label": "test",
+    "author": "test",
+    "on_spotify": false,
+    "genre": {
+      "id": 31,
+      "name": "test"
+    }
   }
 ]

@@ -15,37 +15,45 @@ class App
   def initialize
     @music_albums = []
     @genres = []
+    @books  = []
+    @labels = []
     load_all_data_from_json
-    @books = load_books
-    @labels = load_labels
+  end
+
+
+
+  def list_books
+    puts 'All Music Albums:'
+    if @books.empty?
+      puts 'No Books Available!'
+    else
+      @books.each_with_index do |book,i|
+        puts "Book (#{i+1}): #{book['name']}, Publisher: #{book['publisher']}  Cover State: #{book['covercover_state']}"
+      end
+    end
+    puts 'press enter if you want to continue'
+    gets.chomp
+  end
+
+  def list_labels
+    if @labels.empty?
+      puts 'No Labels Available!'
+    else
+      @labels.each_with_index do |lable,i|
+        puts "Lable (#{i+1}): #{lable['title']}, Color: #{lable['color']} "
+      end
+    end
+    puts 'press enter if you want to continue'
+    gets.chomp
   end
 
   def add_book
     create_book_label
+    puts 'press enter if you want to continue'
+    gets.chomp
   end
 
-  def list_books
-    list_books_m
-  end
-
-  def list_labels
-    list_labels_m
-  end
-
-  #   Method to save data to json
-  def save_all_data_to_json
-    store_data_to_json('./data/music_albums.json', @music_albums)
-    store_data_to_json('./data/genres.json', @genres)
-  end
-
-  #   Method to load data from json
-  def load_all_data_from_json
-    @music_albums = load_data_from_json('./data/music_albums.json')
-    @genres = load_data_from_json('./data/genres.json')
-  end
-
-  # Methods to list all albums and genres
-  # Also adds music album
+  # #Music Album and genre
   def list_all_music_albums
     puts 'All Music Albums:'
     if @music_albums.empty?
@@ -57,6 +65,8 @@ class App
       end
 
     end
+    puts 'press enter if you want to continue'
+    gets.chomp
   end
 
   def list_all_genres
@@ -68,6 +78,8 @@ class App
         puts "- #{genre['name']}"
       end
     end
+    puts 'press enter if you want to continue'
+    gets.chomp
   end
 
   def add_music_album
@@ -94,8 +106,19 @@ class App
 
     @music_albums << music_album
     @genres << genre
-    save_all_data_to_json
+    store_data_to_json('./data/music_albums.json', @music_albums)
+    store_data_to_json('./data/genres.json', @genres)
     load_all_data_from_json
     puts 'Music album added successfully!'
+    puts 'press enter if you want to continue'
+    gets.chomp
   end
+
+    #   Method to load data from json
+    def load_all_data_from_json
+      @music_albums = load_data_from_json('./data/music_albums.json')
+      @genres = load_data_from_json('./data/genres.json')
+      @books  = load_data_from_json('./data/books.json')
+      @labels = load_data_from_json('./data/labels.json')
+    end
 end
