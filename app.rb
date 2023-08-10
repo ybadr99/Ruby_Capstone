@@ -1,17 +1,11 @@
-require_relative 'classes/item'
 require_relative 'classes/music_album'
 require_relative 'classes/genre'
 require_relative 'classes/book'
 require_relative 'classes/label'
-require_relative 'save_load_data/save_data'
-require_relative 'modules/book_label_module'
 require_relative 'preserve_data'
 require 'json'
 
 class App
-  include SaveData
-  include BookLabelModule
-
   def initialize
     @music_albums = []
     @genres = []
@@ -75,9 +69,10 @@ class App
     @books << new_book
     @labels << new_label
 
-    store_data_to_json('./data/books.json', @books)
-    store_data_to_json('./data/labels.json', @labels)
+    save_data('./data/books.json', @books)
+    save_data('./data/labels.json', @labels)
     load_all_data_from_json
+    puts 'Book added successfully!'
 
     puts 'press enter if you want to continue'
     gets.chomp
@@ -136,8 +131,8 @@ class App
 
     @music_albums << music_album
     @genres << genre
-    store_data_to_json('./data/music_albums.json', @music_albums)
-    store_data_to_json('./data/genres.json', @genres)
+    save_data('./data/music_albums.json', @music_albums)
+    save_data('./data/genres.json', @genres)
     load_all_data_from_json
     puts 'Music album added successfully!'
     puts 'press enter if you want to continue'
@@ -146,9 +141,9 @@ class App
 
   #   Method to load data from json
   def load_all_data_from_json
-    @music_albums = load_data_from_json('./data/music_albums.json')
-    @genres = load_data_from_json('./data/genres.json')
-    @books = load_data_from_json('./data/books.json')
-    @labels = load_data_from_json('./data/labels.json')
+    @music_albums = load_data('./data/music_albums.json')
+    @genres = load_data('./data/genres.json')
+    @books = load_data('./data/books.json')
+    @labels = load_data('./data/labels.json')
   end
 end
