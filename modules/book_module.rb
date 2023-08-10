@@ -1,5 +1,3 @@
-require_relative '../preserve_data'
-
 module BookModule
   def all_books
     if @books.empty?
