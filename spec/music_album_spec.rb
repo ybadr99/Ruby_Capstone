@@ -42,7 +42,7 @@ describe MusicAlbum do
         expect(result).to be true
       end
     end
-  
+
     context 'when album is not over 10 years old' do
       it 'returns false' do
         allow(subject).to receive(:on_spotify).and_return(true)
@@ -51,7 +51,7 @@ describe MusicAlbum do
         expect(result).to be false
       end
     end
-  
+
     context 'when album is over 10 years old but not on Spotify' do
       it 'returns false' do
         allow(subject).to receive(:on_spotify).and_return(false)
@@ -62,4 +62,3 @@ describe MusicAlbum do
     end
   end
 end
-  

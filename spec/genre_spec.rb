@@ -1,4 +1,4 @@
-require_relative '../classes/genre' 
+require_relative '../classes/genre'
 
 describe Genre do
   let(:genre_name) { 'HipHop' }
