@@ -16,5 +16,11 @@
     "publisher": "me",
     "publish_date": "2000-01-01",
     "cover_state": "bad"
+  },
+  {
+    "name": "test",
+    "publisher": "test",
+    "publish_date": "1-1-1",
+    "cover_state": "bad"
   }
 ]

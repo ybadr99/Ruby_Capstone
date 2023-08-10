@@ -1,1 +1,10 @@
-[{ "title": "Gift", "color": "Green" }]
+[
+  {
+    "title": "Gift",
+    "color": "Green"
+  },
+  {
+    "title": "new",
+    "color": "red"
+  }
+]

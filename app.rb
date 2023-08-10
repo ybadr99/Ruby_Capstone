@@ -15,20 +15,18 @@ class App
   def initialize
     @music_albums = []
     @genres = []
-    @books  = []
+    @books = []
     @labels = []
     load_all_data_from_json
   end
-
-
 
   def list_books
     puts 'All Music Albums:'
     if @books.empty?
       puts 'No Books Available!'
     else
-      @books.each_with_index do |book,i|
-        puts "Book (#{i+1}): #{book['name']}, Publisher: #{book['publisher']}  Cover State: #{book['covercover_state']}"
+      @books.each_with_index do |book, i|
+        puts "Book (#{i + 1}): #{book['name']}, Publisher: #{book['publisher']}  Cover State: #{book['covercover_state']}"
       end
     end
     puts 'press enter if you want to continue'
@@ -39,8 +37,8 @@ class App
     if @labels.empty?
       puts 'No Labels Available!'
     else
-      @labels.each_with_index do |lable,i|
-        puts "Lable (#{i+1}): #{lable['title']}, Color: #{lable['color']} "
+      @labels.each_with_index do |lable, i|
+        puts "Lable (#{i + 1}): #{lable['title']}, Color: #{lable['color']} "
       end
     end
     puts 'press enter if you want to continue'
@@ -48,7 +46,39 @@ class App
   end
 
   def add_book
-    create_book_label
+    # Gather information to create a new book
+    puts 'Kindly input name of the book.'
+    book_name = gets.chomp
+
+    puts 'Kindly input publisher of the book.'
+    book_publisher = gets.chomp
+
+    puts 'Kindly input date of publish of the book. [YYYY-MM-DD]'
+    book_publish_date = gets.chomp
+
+    puts 'Kindly input the cover state of the book? (Good/Bad)'
+    book_cover_state = gets.chomp
+
+    # Gather information to create a new label
+    puts 'Kindly input title of the label  of the book? (e.g. Gift, New)'
+    label_title = gets.chomp
+
+    puts 'Kindly input the color of the label of the book?'
+    label_color = gets.chomp
+
+    # Create and return a new Label instance
+    new_label = Label.new(label_title, label_color)
+
+    # Create and return a new Book instance
+    new_book = Book.new(book_name, book_publisher, book_publish_date, book_cover_state)
+
+    @books << new_book
+    @labels << new_label
+
+    store_data_to_json('./data/books.json', @books)
+    store_data_to_json('./data/labels.json', @labels)
+    load_all_data_from_json
+
     puts 'press enter if you want to continue'
     gets.chomp
   end
@@ -114,11 +144,11 @@ class App
     gets.chomp
   end
 
-    #   Method to load data from json
-    def load_all_data_from_json
-      @music_albums = load_data_from_json('./data/music_albums.json')
-      @genres = load_data_from_json('./data/genres.json')
-      @books  = load_data_from_json('./data/books.json')
-      @labels = load_data_from_json('./data/labels.json')
-    end
+  #   Method to load data from json
+  def load_all_data_from_json
+    @music_albums = load_data_from_json('./data/music_albums.json')
+    @genres = load_data_from_json('./data/genres.json')
+    @books = load_data_from_json('./data/books.json')
+    @labels = load_data_from_json('./data/labels.json')
+  end
 end
