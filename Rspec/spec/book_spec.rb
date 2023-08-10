@@ -1,7 +1,6 @@
 require 'rspec'
 require_relative '../../classes/book'
 
-
 describe Book do
   let(:publish_date) { Date.new(2023, 8, 10) }
   let(:cover_state_good) { 'good' }
