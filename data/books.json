@@ -22,5 +22,17 @@
     "publisher": "test",
     "publish_date": "1-1-1",
     "cover_state": "bad"
+  },
+  {
+    "name": "one",
+    "publisher": "two",
+    "publish_date": "8-8-8",
+    "cover_state": "bad"
+  },
+  {
+    "name": "test",
+    "publisher": "test",
+    "publish_date": "9-9-9",
+    "cover_state": "bad"
   }
 ]
