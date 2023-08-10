@@ -30,7 +30,7 @@
 
 # 📖 Ruby group capstone - Catalog of my things <a name="about-project"></a>
 
-**Ruby group capstone - Catalog of my things: This project involves creating a console application that serves as a catalog for various types of belongings, such as books, music albums, movies, and games. 
+**Ruby group capstone** - Catalog of my things: This project involves creating a console application that serves as a catalog for various types of belongings, such as books, music albums, movies, and games. 
 The application will allow users to keep track of their possessions, store information about each item (like title, author, release date, etc.), and organize them into categories. 
 
 ## 🛠 Built With <a name="built-with"></a>
