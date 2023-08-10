@@ -1,3 +1,5 @@
+-- schema.sql
+
 -- Create genres table
 CREATE TABLE genres (
     id INT PRIMARY KEY,
