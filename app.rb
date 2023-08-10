@@ -16,6 +16,8 @@ class App
     @music_albums = []
     @genres = []
     load_all_data_from_json
+     @books = load_books
+    @labels = load_labels
   end
 
   def add_book
