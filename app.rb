@@ -77,7 +77,7 @@ class App
     puts 'Press Enter to continue!'
     gets.chomp
   end
-  
+
   def list_all_authors
     puts 'All games:'
     all_authors

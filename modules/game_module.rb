@@ -43,6 +43,5 @@ module GameModule
     save_data('./data/authors.json', @authors)
 
     load_all_data_from_json
-
   end
 end
