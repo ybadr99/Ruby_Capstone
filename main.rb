@@ -18,7 +18,6 @@ def options_list()
   gets.chomp
 end
 
-# rubocop:disable Metrics/MethodLength
 def main
   app = App.new
   puts 'Welcome to Catalog of my things!'
@@ -26,9 +25,6 @@ def main
   loop do
     number = options_list
     case number
-    when '0'
-      puts 'Goodbye!'
-      break
     when '1'
       app.list_books
     when '2'
@@ -50,5 +46,4 @@ def main
     end
   end
 end
-# rubocop:enable Metrics/MethodLength
 main
