@@ -1,0 +1,42 @@
+[
+  {
+    "published_date": "2023-03-21",
+    "label": "Mr. Morale",
+    "author": "Kendrick Lamar",
+    "on_spotify": true,
+    "genre": {
+      "id": 55,
+      "name": "HipHop"
+    }
+  },
+  {
+    "published_date": "2023-05-12",
+    "label": "5th Dimension",
+    "author": "StoneBwoy",
+    "on_spotify": true,
+    "genre": {
+      "id": 100,
+      "name": "Afro-DanceHall"
+    }
+  },
+  {
+    "published_date": "2014-08-23",
+    "label": "Forest Hill Drive",
+    "author": "J.Cole",
+    "on_spotify": true,
+    "genre": {
+      "id": 64,
+      "name": "HipHop"
+    }
+  },
+  {
+    "published_date": "2019-03-19",
+    "label": "Twice As Tall",
+    "author": "Burna Boy",
+    "on_spotify": true,
+    "genre": {
+      "id": 37,
+      "name": "Afro-Beat"
+    }
+  }
+]
