@@ -41,29 +41,20 @@ RSpec.describe Game do
   describe '#last_played_old_enough?' do
     context 'when last played more than 2 years ago' do
       it 'returns true' do
-        last_played_at = (Date.today - 3 * 365).to_s  # Assuming the game was played more than 2 years ago
+        last_played_at = (Date.today - (3 * 365)).to_s # Assuming the game was played more than 2 years ago
         game = Game.new('Sample Game', '2020-01-01', last_played_at, true, 'Sample Author')
-        
+
         expect(game.send(:last_played_old_enough?)).to eq(true)
       end
     end
 
     context 'when last played less than 2 years ago' do
       it 'returns false' do
-        last_played_at = Date.today.to_s  # Assuming the game was played today
+        last_played_at = Date.today.to_s # Assuming the game was played today
         game = Game.new('Sample Game', '2020-01-01', last_played_at, true, 'Sample Author')
-        
+
         expect(game.send(:last_played_old_enough?)).to eq(false)
       end
     end
-
-end
-
-
-
-
-
-
-
-
+  end
 end
