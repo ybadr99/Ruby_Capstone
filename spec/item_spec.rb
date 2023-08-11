@@ -1,8 +1,6 @@
 require_relative '../classes/item'
 require 'date'
 
-
-
 describe Item do
   describe '#move_to_archive' do
     context 'when the item can be archived' do
