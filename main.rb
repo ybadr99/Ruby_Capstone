@@ -29,14 +29,20 @@ def main
       app.list_books
     when '2'
       app.list_all_music_albums
+    when '3'
+      app.list_all_games
     when '4'
       app.list_all_genres
     when '5'
       app.list_labels
+    when '6'
+      app.list_all_authors
     when '7'
       app.add_book
     when '8'
       app.add_music_album
+    when '9'
+      app.add_game
     when '0'
       puts 'Thank you for using this app Goodbye!'
       break
