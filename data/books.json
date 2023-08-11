@@ -34,5 +34,11 @@
     "publisher": "test",
     "publish_date": "9-9-9",
     "cover_state": "bad"
+  },
+  {
+    "name": "gggggggggg",
+    "publisher": "gggggggggg",
+    "publish_date": "1990-09-18",
+    "cover_state": "ttttttt"
   }
 ]

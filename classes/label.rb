@@ -12,7 +12,7 @@ class Label
 
   def add_item(item)
     @items << item
-    item.new_label = self
+    item.label = self
   end
 
   def to_hash

@@ -14,7 +14,7 @@ class Author
 
   def add_item(item)
     @items << item
-    item.author(self)
+    item.author=self
   end
 
   def to_hash

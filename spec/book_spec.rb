@@ -5,6 +5,7 @@ RSpec.describe Book do
   let(:cover_state_good) { 'good' }
   let(:cover_state_bad) { 'bad' }
 
+  
   describe '#initialize' do
     it 'creates a Book instance with the provided attributes' do
       name = 'Sample Book'
