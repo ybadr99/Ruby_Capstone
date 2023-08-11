@@ -1,7 +1,7 @@
 require_relative '../classes/music_album'
 require_relative '../classes/genre'
 
-describe MusicAlbum do
+RSpec.describe MusicAlbum do
   let(:published_date) { '2020-02-12' }
   let(:genre) { Genre.new('HipHop') }
   let(:author) { 'J. Cole' }

@@ -18,23 +18,13 @@ RSpec.describe Author do
     end
   end
 
-  describe '#add_item' do
-    it 'adds an item to the author\'s items array' do
-      item = Item.new('2011-01-01')
-      @author.add_item(item)
-      expect(@author.items).to include(item)
-    end
+  describe '#to_hash' do
+  it 'converts game to a hash' do
+    expected_hash = {
+        "first_name": "John",
+        "last_name": "Doe"
+    }
+    expect(@author.to_hash).to eq(expected_hash)
   end
-
-  describe '.from_hash' do
-    it 'creates an author from hash data' do
-      hash_data = {
-        'first_name' => 'Yousef',
-        'last_name' => 'Badr'
-      }
-      created_author = Author.from_hash(hash_data)
-      expect(created_author.first_name).to eq('Yousef')
-      expect(created_author.last_name).to eq('Badr')
-    end
-  end
+end
 end

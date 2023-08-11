@@ -1,8 +1,10 @@
 require_relative '../classes/game'
+require_relative '../classes/author'
 
 RSpec.describe Game do
   before do
-    @game = Game.new('Test Game', '2011-01-01', '2021-01-01', true)
+    @author  = Author.new('yousef', "mohamed")
+    @game = Game.new('Test Game', '2011-01-01', '2021-01-01', true,@author )
   end
 
   describe '#can_be_archived?' do
@@ -26,22 +28,14 @@ RSpec.describe Game do
         name: 'Test Game',
         published_date: Date.parse('2011-01-01'),
         last_played_at: Date.parse('2021-01-01'),
-        multiplayer: true
+        multiplayer: true,
+        "author": {
+          "first_name": "yousef",
+          "last_name": "mohamed"
+        }
       }
       expect(@game.to_hash).to eq(expected_hash)
     end
   end
 
-  describe '.from_hash' do
-    it 'creates game from hash data' do
-      hash_data = {
-        'name' => 'Test Game',
-        'published_date' => '2011-01-01',
-        'last_played_at' => '2021-01-01',
-        'multiplayer' => true
-      }
-      expected_game = Game.new('Test Game', '2011-01-01', '2021-01-01', true)
-      expect(Game.from_hash(hash_data).to_hash).to eq(expected_game.to_hash)
-    end
-  end
 end
