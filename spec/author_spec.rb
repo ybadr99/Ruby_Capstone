@@ -19,12 +19,12 @@ RSpec.describe Author do
   end
 
   describe '#to_hash' do
-  it 'converts game to a hash' do
-    expected_hash = {
-        "first_name": "John",
-        "last_name": "Doe"
-    }
-    expect(@author.to_hash).to eq(expected_hash)
+    it 'converts game to a hash' do
+      expected_hash = {
+        first_name: 'John',
+        last_name: 'Doe'
+      }
+      expect(@author.to_hash).to eq(expected_hash)
+    end
   end
-end
 end
