@@ -25,7 +25,6 @@ RSpec.describe Label do
     end
   end
 
-
   describe '#add_item' do
     it "associates an item with the label and adds it to the label's items list" do
       label = Label.new('Important', 'red')
