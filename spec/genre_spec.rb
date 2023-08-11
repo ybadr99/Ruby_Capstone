@@ -1,6 +1,6 @@
 require_relative '../classes/genre'
 
-describe Genre do
+RSpec.describe Genre do
   let(:genre_name) { 'HipHop' }
 
   subject do
