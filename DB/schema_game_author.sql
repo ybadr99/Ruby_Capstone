@@ -1,0 +1,16 @@
+CREATE TABLE authors (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE games (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  multiplayer VARCHAR(100) NOT NULL,
+  last_played_at DATE NOT NULL,
+  publish_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL DEFAULT false,
+  author_id INTEGER,
+  FOREIGN KEY (author_id) REFERENCES authors(id)
+);
+
